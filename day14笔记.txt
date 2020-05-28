@@ -1,0 +1,111 @@
+
+一、3D变型
+1、属性：
+	transform 向元素应用 2D 或 3D 转换。  
+	transform-origin 允许你改变被转换元素的位置。  
+	transform-style 规定被嵌套元素如何在 3D 空间中显示。 
+	perspective 规定 3D 元素的透视效果。 
+	perspective-origin 规定 3D 元素的底部位置。 
+
+2、方法：
+	translate3d(x,y,z) 定义 3D 转化。 
+	translateX(x) 定义 3D 转化，仅使用用于 X 轴的值。 
+	translateY(y) 定义 3D 转化，仅使用用于 Y 轴的值。 
+	translateZ(z) 定义 3D 转化，仅使用用于 Z 轴的值。 
+	scale3d(x,y,z) 定义 3D 缩放转换。 
+	scaleX(x) 定义 3D 缩放转换，通过给定一个 X 轴的值。 
+	scaleY(y) 定义 3D 缩放转换，通过给定一个 Y 轴的值。 
+	scaleZ(z) 定义 3D 缩放转换，通过给定一个 Z 轴的值。 
+	rotate3d(x,y,z,angle) 定义 3D 旋转。 
+	rotateX(angle) 定义沿 X 轴的 3D 旋转。 
+	rotateY(angle) 定义沿 Y 轴的 3D 旋转。 
+	rotateZ(angle) 定义沿 Z 轴的 3D 旋转。 
+	perspective(n) 定义 3D 转换元素的透视视图。 
+
+3、transform-origin 的属性值
+	transform-origin: x-axis y-axis z-axis;值 描述 
+	x-axis 定义视图被置于 X 轴的何处。可能的值：left center right	length %
+
+ 	y-axis 定义视图被置于 Y 轴的何处。可能的值：top center bottom length % 
+
+	z-axis 定义视图被置于 Z 轴的何处。可能的值：length 
+
+4、transform-style的属性值：
+	transform-style: flat|preserve-3d;
+	值				 描述 
+	flat		 	子元素将不保留其 3D 位置。 
+	preserve-3d 	子元素将保留其 3D 位置。 
+	基本上，我们想要根据现实经验实现一些3D效果的时候，transform-style: preserve-3d是少不了的。
+	一般而言，该声明应用在3D变换的兄弟元素们的父元素上，也就是舞台元素。
+
+5、perspective的属性值： 中文意思是透视，视角，3d变型必不可少的属性
+	perspective: number   元素距离视图的距离
+	如：perspective:500;
+perspective属性有两种书写形式，一种用在舞台元素上（动画元素们的共同父辈元素）；第二种就是用在当前动画元素上，与transform的其他属性写在一起。如下代码示例：
+
+#box {
+    perspective: 600px;
+}
+以及：
+
+#box .item {
+    transform: perspective(600px) rotateY(45deg);
+}
+6、perspective-origin 属性定义 3D 元素所基于的 X 轴和 Y 轴。该属性允许您改变 3D 元素的底部位置。
+当为元素定义 perspective-origin 属性时，其子元素会获得透视效果，而不是元素本身。
+注释：该属性必须与 perspective 属性一同使用，而且只影响 3D 转换元素。
+perspective-origin: x-axis y-axis;值 描述 
+x-axis 定义该视图在 x 轴上的位置。默认值：50%。可能的值：left center right length % 
+ 
+y-axis 定义该视图在 y 轴上的位置。默认值：50%。可能的值：top center bottom length % 
+
+二、平滑动画
+1、transition-property 规定应用过渡的 CSS 属性的名称。 
+2、transition-duration 定义过渡效果花费的时间。默认是 0。 
+3、transition-timing-function 规定过渡效果的时间曲线。默认是 "ease"。 
+	取值：
+	linear 规定以相同速度开始至结束的过渡效果
+	ease 规定慢速开始，然后变快，然后慢速结束的过渡效果
+	ease-in 规定以慢速开始的过渡效果
+	ease-out 规定以慢速结束的过渡效果
+	ease-in-out 规定以慢速开始和结束的过渡效果
+
+4、transition-delay 规定过渡效果何时开始。默认是 0。 
+5、transition 简写属性，用于在一个属性中设置四个过渡属性。 
+
+
+三、关键帧动画
+1、@keyframes 规定动画。 3 
+2、animation-name 规定 @keyframes 动画的名称。 
+3、animation-duration 规定动画完成一个周期所花费的秒或毫秒。默认是 0。
+4、animation-timing-function 规定动画的速度曲线。默认是 "ease"。
+5、animation-delay 规定动画何时开始。默认是 0。 
+6、animation-iteration-count 规定动画被播放的次数。默认是 1。 
+	取值：
+	n 一个数字，定义应该播放多少次动画  如：animation-iteration-count：3; 表示执行3次
+	infinite 指定动画应该播放无限次（永远） 
+
+	
+7、animation-direction 规定动画是否在下一周期逆向地播放。默认是 "normal"。 
+	取值：
+	normal 默认值。动画按正常播放。
+	reverse 动画反向播放。
+	alternate 动画在奇数次（1、3、5...）正向播放，在偶数次（2、4、6...）反向播放。 
+	alternate-reverse 动画在奇数次（1、3、5...）反向播放，在偶数次（2、4、6...）正向播放。
+	
+
+8、animation 所有动画属性的简写属性，除了 animation-play-state 属性。 3 
+
+ 
+
+
+
+ 
+
+ 
+ 
+ 
+
+
+
+ 

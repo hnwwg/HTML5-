@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:60px;
+				height:60px;
+				background:yellow;
+				/*border-radius: 50%;*/
+				
+				animation-name: myani; /*动画的名字*/
+				animation-duration: 3s; /*动画执行的时间*/
+				animation-iteration-count:infinite;/* 动画执行的次数*/
+				/*animation-direction: alternate;*/ /*动画交替执行*/
+				animation-timing-function: ease-in; /*加速度*/
+				animation-delay: 4s;
+				
+				position: absolute;
+				left:0px;
+				top:0px;
+				
+			}
+			/*@keyframes myani{
+				from{
+					transform: translateX(0px);
+				}
+				to{
+					transform: translateX(1000px);
+				}
+			}*/
+			/*@keyframes myani{
+				from{
+					background:yellow;
+					width:60px;
+					
+				}
+				to{
+					background:pink;
+					width:200px;
+				}
+			}*/
+			@keyframes myani{
+				from{
+					left:0px;
+					top:0px;
+					background:yellow;
+				}
+				25%{
+					left:500px;
+					top:0px;
+					background:pink;
+				}
+				50%{
+					left:500px;
+					top:500px;
+					background:deeppink;
+				}
+				75%{
+					left:0px;
+					top:500px;
+					background:red;
+				}
+				to{
+					left:0px;
+					top:0px;
+					background:yellow;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<!--<div id="box2">
+			
+		</div>-->
+	</body>
+</html>

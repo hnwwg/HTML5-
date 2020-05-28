@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.container {
+				
+				width: 200px;
+				height: 200px;
+				margin-bottom: 50px;
+				border: 1px solid blue;
+			}
+			
+			.box {
+				width: 100%;
+				height: 100%;
+				/*opacity: .75;*/
+			}
+			
+			#red .box {
+				background-color: red;
+				transform: perspective(600px) rotateY(45deg);
+			}
+			
+			
+			#blue {
+				perspective: 600px;
+			}
+			
+			#blue .box {
+				background-color: blue;
+				transform: rotateY(45deg);
+			}
+		</style>
+	</head>
+
+	<body>
+	<!--http://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition/-->
+		<div id="red" class="container">
+			<div class="box"></div>
+		</div>
+
+		<div id="blue" class="container">
+			<div class="box"></div>
+		</div>
+	</body>
+
+</html>

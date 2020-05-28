@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.container{
+				width:200px;
+				height:200px;
+				border:1px solid red;
+				perspective: 600px;
+				margin-top:30px;
+				float:left;
+				margin-left:50px;
+			}
+			.container:nth-child(1) div{
+				width:200px;
+				height:200px;
+				background:blue;
+				transform-style:preserve-3d;
+				
+				transform:rotateY(45deg);
+			}
+			.container:nth-child(2) div{
+				width:100%;
+				height:100%;
+				background:pink;
+				transform:rotateX(45deg);
+			}
+			.container:nth-child(3) div{
+				width:100%;
+				height:100%;
+				background:yellow;
+				transform:rotateZ(45deg);
+			}
+			.container:nth-child(4) div{
+				width:100%;
+				height:100%;
+				background:blue;
+				transform:translateZ(-150px);
+			}
+			.container:nth-child(5) div{
+				width:100%;
+				height:100%;
+				background:blue;
+				transform:translateX(-50px) rotateY(90deg);
+				transform-style: preserve-3d;
+			
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+			<div class="container">
+				<div>
+				
+				</div>
+			</div>
+			<div class="container">
+				<div>
+				
+				</div>
+			</div>
+			<div class="container">
+				<div>
+				
+				</div>
+			</div>
+			<div class="container">
+				<div>
+				
+				</div>
+			</div>
+			<div class="container">
+				<div>
+				
+				</div>
+			</div>
+			
+		
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:500px;
+				height:500px;
+				border:1px solid red;
+				perspective: 600px;
+				
+				margin: 0 auto;
+			}
+			.container{
+				width:400px;
+				height:400px;
+				border:1px solid red;
+				margin-left:50px;
+				margin-top:50px;
+				position: relative;
+				transform-style: preserve-3d;
+				/*transform: rotateX(45deg);*/
+			}
+			.container div{
+				width:300px;
+				height:300px;
+				/*background:blue;*/
+				position: absolute;
+				left:50px;
+				top:50px;
+			}
+			.container div:nth-child(1)
+			{
+				background:rgba(0,0,0,0.5);
+				transform:translateZ(150px);
+			}
+			.container div:nth-child(2)
+			{
+				background:rgba(0,0,0,0.5);
+				transform:translateZ(-150px);
+			}
+			.container div:nth-child(3)
+			{
+				background:rgba(200,0,0,0.5);
+				transform:translateX(-150px) rotateY(-90deg);
+			}
+			.container div:nth-child(4)
+			{
+				background:rgba(200,200,0,0.5);
+				transform:translateY(-150px) rotateX(90deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="container">
+				<div>前</div>
+				<div>后</div>
+				<div>左</div>
+				<div>上</div>
+				<!--<div></div>
+				<div></div>-->
+			</div>
+		</div>
+	</body>
+</html>
